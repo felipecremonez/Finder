@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca de XMLs Emitidos</title>
+    <link rel="stylesheet" href="src\styles.css">
+</head>
+<body>
+
+    <label class="ui-switch">
+        <input type="checkbox">
+        <div class="slider">
+            <div class="circle"></div>
+        </div>
+    </label>
+
+
+    <div class="container">
+        <h1>Busca de NFe's Emitidas</h1>
+        <form id="search-form">
+            <div class="form-group">
+                <label for="cnpj">CNPJ:</label>
+                <input type="text" id="cnpj" name="cnpj" required>
+            </div>
+            <button><span>Buscar</span></button>
+        </form>
+        <div id="results"></div>
+    </div>
+    <script src="src\script.js"></script>
+</body>
+</html>
