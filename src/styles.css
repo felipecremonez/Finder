@@ -1,3 +1,14 @@
+/* html{
+    color-scheme: light dark;
+} */
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #333;
+    }
+}
+
+/* Modo Claro */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -5,8 +16,20 @@ body {
     margin: 0;
     padding: 0;
 }
-/* From Uiverse.io by Galahhad */ 
-/* switch settings 👇 */
+
+/* Modo Escuro */
+body.dark-mode {
+    background-color: #444;
+    color: #f4f4f4;
+}
+
+body.dark-mode .container {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Resto do código CSS permanece o mesmo */
+
 
 .ui-switch {
     /* switch */
@@ -34,7 +57,7 @@ body {
     height: var(--switch-height);
     background: var(--switch-bg);
     border-radius: 999px;
-    position: relative;
+    position: absolute;
     cursor: pointer;
 }
 
@@ -114,11 +137,26 @@ h1 {
 
 .form-group {
     margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+#date{
+    border-radius: 7px;
+    font-size: 15px;
+    padding: 2px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+#cnpj{
+    margin-bottom: 20px;
 }
 
 label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: px;
 }
 
 input[type="text"] {
@@ -184,4 +222,10 @@ span {
 
 #results {
     margin-top: 20px;
+}
+.date-range {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-direction: row;
 }

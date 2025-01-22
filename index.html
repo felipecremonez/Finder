@@ -4,29 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Busca de XMLs Emitidos</title>
-    <link rel="stylesheet" href="src\styles.css">
+    <link rel="stylesheet" href="src/styles.css">
 </head>
 <body>
-
     <label class="ui-switch">
         <input type="checkbox">
-        <div class="slider">
+        <div onclick="ToggleDarkMode()" class="slider">
             <div class="circle"></div>
         </div>
     </label>
-
 
     <div class="container">
         <h1>Busca de NFe's Emitidas</h1>
         <form id="search-form">
             <div class="form-group">
                 <label for="cnpj">CNPJ:</label>
-                <input type="text" id="cnpj" name="cnpj" required>
+                <input type="text" id="cnpj" name="Cnpj" placeholder="00.000.000/0000-00" maxlength="18" required>
+                <label for="dateEmission">Data de Emissão:</label>
+                <div class="date-range">
+                    <input type="date" id="date" name="Data de Emissão" required>
+                    <h4>até</h4>
+                    <input type="date" id="date" name="Data de Emissão" required>
+                </div>
             </div>
             <button><span>Buscar</span></button>
         </form>
         <div id="results"></div>
     </div>
-    <script src="src\script.js"></script>
+    <script src="src/script.js"></script>
 </body>
 </html>

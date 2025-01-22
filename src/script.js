@@ -1,3 +1,36 @@
+function ToggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+}
+
+// EventListener para formulário de busca (opcional)
+document.getElementById('search-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const cnpj = document.getElementById('cnpj').value;
+    console.log("CNPJ enviado:", cnpj);
+});
+
+
+function formatCNPJ(input) {
+    let value = input.value;
+
+    // Remove todos os caracteres que não são números
+    value = value.replace(/\D/g, "");
+
+    // Adiciona a formatação do CNPJ
+    value = value.replace(/^(\d{2})(\d)/, "$1.$2");
+    value = value.replace(/^(\d{2})\.(\d{3})(\d)/, "$1.$2.$3");
+    value = value.replace(/\.(\d{3})(\d)/, ".$1/$2");
+    value = value.replace(/(\d{4})(\d)/, "$1-$2");
+
+    // Atualiza o valor do input
+    input.value = value;
+}
+
+// Adiciona o evento de input ao campo CNPJ
+document.getElementById("cnpj").addEventListener("input", function () {
+    formatCNPJ(this);
+});
+
 document.getElementById('search-form').addEventListener('submit', function(event) {
     event.preventDefault();
     
@@ -88,3 +121,6 @@ app.post('/buscar-xmls', async (req, res) => {
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
 });
+
+
+
