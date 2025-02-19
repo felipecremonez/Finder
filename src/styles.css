@@ -135,6 +135,13 @@ h1 {
     margin-bottom: 20px;
 }
 
+#search-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
 .form-group {
     margin-bottom: 15px;
     display: flex;
