@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "node-mde": "^0.14.11",
+    "node-mde": "^0.14.13",
     "sqlite3": "^5.1.7"
   }
 }
